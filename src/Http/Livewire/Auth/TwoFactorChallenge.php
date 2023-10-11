@@ -4,7 +4,7 @@ namespace Webbingbrasil\FilamentTwoFactor\Http\Livewire\Auth;
 
 use Filament\Facades\Filament;
 use Filament\Forms;
-use Filament\Http\Livewire\Concerns\CanNotify;
+use Filament\Actions\Concerns\CanNotify;
 use Filament\Http\Responses\Auth\Contracts\LoginResponse;
 use Illuminate\Contracts\View\View;
 use Livewire\Component;

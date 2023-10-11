@@ -3,6 +3,7 @@
 namespace Webbingbrasil\FilamentTwoFactor\Pages;
 
 use Filament\Pages\Page;
+use Illuminate\Contracts\Support\Htmlable;
 
 class TwoFactor extends Page
 {
@@ -14,12 +15,12 @@ class TwoFactor extends Page
         return __('filament-2fa::two-factor.navigation_label');
     }
 
-    protected function getTitle(): string
+    public function getTitle():  string | Htmlable
     {
-        return __('filament-2fa::two-factor.title');
+        return __('filament-2fa::two-factor.title') || '';
     }
 
-    protected static function shouldRegisterNavigation(): bool
+    public static function shouldRegisterNavigation(): bool
     {
         return config('filament-2fa.show_two_factor_page_in_navbar');
     }
